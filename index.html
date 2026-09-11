@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#07070b" />
 <title>Jannatul Ferdous Oishee | Official Portfolio | Actress & Model</title>
 <meta name="description" content="Official portfolio of Jannatul Ferdous Oishee - Miss World Bangladesh, film actress and fashion icon. Filmography, gallery, press and booking." />
 <meta property="og:title" content="Jannatul Ferdous Oishee - Actress & Model" />
@@ -204,6 +205,38 @@
   @media (prefers-reduced-motion:reduce){
     *{ animation-duration:.001s !important; transition-duration:.001s !important; }
   }
+
+  /* ---------- Responsive polish: phone · tab · desktop ---------- */
+  html{ -webkit-text-size-adjust:100%; }
+  body{ -webkit-tap-highlight-color:transparent; }
+  img{ -webkit-user-select:none; user-select:none; }
+
+  /* Phones */
+  @media (max-width:640px){
+    .field{ font-size:16px !important; }              /* stops iOS auto-zoom on input focus */
+    .hero-title-1{ font-size:11vw !important; }
+    .hero-title-2{ font-size:14.5vw !important; }
+    .eyebrow{ letter-spacing:.32em; }
+    #site-header nav{ padding-left:.9rem; padding-right:.9rem; }
+  }
+  /* Very small phones (iPhone SE / older Androids) */
+  @media (max-width:380px){
+    .hero-title-1{ font-size:10vw !important; }
+    .hero-title-2{ font-size:13vw !important; }
+  }
+  /* Tablets */
+  @media (min-width:641px) and (max-width:1023px){
+    .hero-title-1{ font-size:4rem; }
+    .hero-title-2{ font-size:5.8rem; }
+  }
+  /* Short landscape phones */
+  @media (max-height:520px) and (orientation:landscape){
+    .hero-inner{ padding-top:6.5rem !important; padding-bottom:2.5rem !important; }
+    .scroll-hint{ display:none; }
+  }
+  /* Notch / safe-area aware floating buttons */
+  #to-top{ bottom:calc(1.25rem + env(safe-area-inset-bottom)); right:calc(1.25rem + env(safe-area-inset-right)); }
+  #toast{ bottom:calc(1.25rem + env(safe-area-inset-bottom)); }
 </style>
 </head>
 
@@ -255,11 +288,11 @@
       <a href="#home" class="flex items-center gap-3 group" aria-label="Oishee - Home">
         <span class="font-display font-bold text-xl tracking-[.35em] gold-grad-text">OISHEE</span>
         <span class="hidden sm:block w-px h-4 bg-white/20"></span>
-        <span class="hidden sm:block text-[9px] tracking-[.3em] text-white/50 uppercase group-hover:text-white/80 transition-colors">Actress · Model</span>
+        <span class="hidden xl:block text-[9px] tracking-[.3em] text-white/50 uppercase group-hover:text-white/80 transition-colors">Actress · Model</span>
       </a>
 
       <!-- Desktop links -->
-      <ul class="hidden lg:flex items-center gap-8 text-[11px] font-medium tracking-[.22em] uppercase text-white/70">
+      <ul class="hidden lg:flex items-center lg:gap-4 xl:gap-8 lg:text-[10px] xl:text-[11px] font-medium tracking-[.22em] uppercase text-white/70">
         <li><a class="nav-link hover:text-white transition-colors" href="#home" data-spy="home">Home</a></li>
         <li><a class="nav-link hover:text-white transition-colors" href="#about" data-spy="about">About</a></li>
         <li><a class="nav-link hover:text-white transition-colors" href="#filmography" data-spy="filmography">Filmography</a></li>
@@ -292,12 +325,12 @@
       </button>
     </div>
     <nav class="flex flex-col gap-1 text-white/85" aria-label="Mobile">
-      <a href="#home" class="menu-link font-display text-3xl py-3 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Home <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37]"></i></a>
-      <a href="#about" class="menu-link font-display text-3xl py-3 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">About <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37]"></i></a>
-      <a href="#filmography" class="menu-link font-display text-3xl py-3 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Filmography <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37]"></i></a>
-      <a href="#gallery" class="menu-link font-display text-3xl py-3 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Gallery <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37]"></i></a>
-      <a href="#press" class="menu-link font-display text-3xl py-3 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Press <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37]"></i></a>
-      <a href="#contact" class="menu-link font-display text-3xl py-3 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Contact <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37]"></i></a>
+      <a href="#home" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Home <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
+      <a href="#about" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">About <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
+      <a href="#filmography" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Filmography <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
+      <a href="#gallery" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Gallery <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
+      <a href="#press" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 border-b border-white/8 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Press <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
+      <a href="#contact" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Contact <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
     </nav>
     <a href="#contact" class="menu-link btn-gold mt-8 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-xs font-bold tracking-[.2em] uppercase">
       Book Oishee <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
@@ -317,23 +350,37 @@
   <div class="absolute inset-0 -z-10">
     <div class="absolute inset-0 bg-gradient-to-b from-[#101017] via-[#0a0a10] to-[#07070b]"></div>
     <img id="hero-img" src="./Hero/hero.jpg" alt="Jannatul Ferdous Oishee - cinematic hero portrait"
-         class="w-full h-full object-cover object-[center_18%] scale-105 will-change-transform"
+         class="w-full h-full object-cover object-[50%_24%] md:object-[center_18%] scale-105 opacity-40 md:opacity-100 will-change-transform"
          onerror="this.onerror=null;this.src='https://images.pexels.com/photos/16791445/pexels-photo-16791445.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1400&w=2000';" />
     <!-- Fallback-safe overlay (keeps text readable regardless of image) -->
     <div class="hero-veil absolute inset-0"></div>
+    <!-- Phone-only extra veil (keeps mobile copy crisp over the dimmed backdrop photo) -->
+    <div class="md:hidden absolute inset-0 bg-[#07070b]/50"></div>
   </div>
 
   <!-- Content - pt-32 on mobile / pt-40 on desktop guarantees the fixed header never covers the headline -->
-  <div class="relative z-10 w-full mx-auto max-w-6xl px-5 sm:px-8 pt-32 pb-20 md:pt-40 md:pb-28 text-center">
-    <div class="reveal flex items-center justify-center gap-4 mb-7" style="--d:150ms">
+  <div class="hero-inner relative z-10 w-full mx-auto max-w-6xl px-5 sm:px-8 pt-32 pb-20 md:pt-40 md:pb-28 text-center">
+    <!-- Phone-only framed hero portrait (the hero photo is always perfectly visible on small screens) -->
+    <div class="md:hidden reveal mx-auto mb-9 w-[min(72vw,290px)]" style="--d:120ms">
+      <div class="glass rounded-3xl p-2.5 rotate-[-1.5deg]">
+        <div class="relative overflow-hidden rounded-2xl aspect-[3/4]">
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-[#07070b]/40 via-transparent to-transparent"></div>
+          <img src="./Hero/hero.jpg" alt="Jannatul Ferdous Oishee - hero portrait"
+               class="w-full h-full object-cover object-[50%_18%]"
+               onerror="this.onerror=null;this.src='https://images.pexels.com/photos/16791445/pexels-photo-16791445.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=900';" />
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal flex items-center justify-center gap-4 mb-7" style="--d:260ms">
       <span class="hairline w-10 sm:w-16"></span>
       <span class="eyebrow">Miss World Bangladesh · 2018</span>
       <span class="hairline w-10 sm:w-16"></span>
     </div>
 
     <h1 class="reveal font-display font-extrabold leading-[1.02] tracking-tight" style="--d:300ms">
-      <span class="block text-[13vw] sm:text-7xl lg:text-8xl text-[#f5f1e6] drop-shadow-[0_6px_30px_rgba(0,0,0,.6)]">JANNATUL FERDOUS</span>
-      <span class="block text-[16.5vw] sm:text-8xl lg:text-[8.5rem] gold-grad-text italic pr-2 pb-1">OISHEE</span>
+      <span class="block hero-title-1 text-[13vw] sm:text-7xl lg:text-8xl text-[#f5f1e6] drop-shadow-[0_6px_30px_rgba(0,0,0,.6)]">JANNATUL FERDOUS</span>
+      <span class="block hero-title-2 text-[16.5vw] sm:text-8xl lg:text-[8.5rem] gold-grad-text italic pr-2 pb-1">OISHEE</span>
     </h1>
 
     <p class="reveal mt-6 text-[11px] sm:text-sm tracking-[.35em] uppercase text-white/70" style="--d:450ms">
@@ -350,7 +397,7 @@
     </div>
 
     <!-- Socials (official brand SVGs - always render correctly) -->
-    <div class="reveal mt-10 flex items-center justify-center gap-3" style="--d:750ms">
+    <div class="reveal mt-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 px-2" style="--d:750ms">
       <a href="https://www.facebook.com/OisheeMWBD18" target="_blank" rel="noopener" aria-label="Facebook"
          class="glass-soft soc w-11 h-11 rounded-xl text-white/70 hover:text-[#e8cf8a] hover:border-[rgba(212,175,55,.5)] transition-all duration-300 hover:-translate-y-1"><svg class="w-4.5 h-4.5"><use href="#brand-facebook"/></svg></a>
       <a href="https://www.instagram.com/jf.oishee/" target="_blank" rel="noopener" aria-label="Instagram"
@@ -719,7 +766,7 @@
 </footer>
 
 <!-- ==================== BACK TO TOP ==================== -->
-<button id="to-top" class="glass fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full items-center justify-center text-[#e8cf8a] hidden sm:flex opacity-0 pointer-events-none translate-y-4 transition-all duration-500 hover:border-[rgba(212,175,55,.6)]" aria-label="Back to top">
+<button id="to-top" class="glass fixed z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-[#e8cf8a] opacity-0 pointer-events-none translate-y-4 transition-all duration-500 hover:border-[rgba(212,175,55,.6)]" aria-label="Back to top">
   <i data-lucide="arrow-up" class="w-5 h-5"></i>
 </button>
 
@@ -939,6 +986,15 @@
     if (e.key === "ArrowLeft") setLb(lbIndex - 1);
     if (e.key === "ArrowRight") setLb(lbIndex + 1);
   });
+  // Touch swipe navigation for phones / tablets (swipe left = next, right = prev)
+  let lbTouchX = null;
+  lb.addEventListener("touchstart", (e) => { lbTouchX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (lbTouchX === null) return;
+    const dx = e.changedTouches[0].clientX - lbTouchX;
+    if (Math.abs(dx) > 45) setLb(lbIndex + (dx < 0 ? 1 : -1));
+    lbTouchX = null;
+  }, { passive: true });
 
   /* ---------------- Press / Blog (data-driven) ---------------- */
   const POSTS = [
