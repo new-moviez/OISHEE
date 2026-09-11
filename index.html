@@ -847,10 +847,10 @@
       </div>
     </article>`).join("");
 
-  /* ---------------- Gallery (dynamic scanner: ./Gallery/photo1..20.jpg) ---------------- */
+  /* ---------------- Gallery (dynamic scanner: ./Gallery/photo1..20.webp) ---------------- */
   const TOTAL_PHOTOS = 20;
   const galleryImages = [];
-  for (let i = 1; i <= TOTAL_PHOTOS; i++) galleryImages.push("./Gallery/photo" + i + ".jpg");
+  for (let i = 1; i <= TOTAL_PHOTOS; i++) galleryImages.push("./Gallery/photo" + i + ".webp");
   // Tracks the *displayed* source (local, or remote fallback if the local file is absent)
   const resolvedSrc = new Array(TOTAL_PHOTOS).fill(null);
 
