@@ -209,6 +209,13 @@
   #lightbox.open{ opacity:1; }
   #lightbox img{ box-shadow:0 40px 120px -20px rgba(0,0,0,.9); }
 
+  /* ---------- Custom cursor ---------- */
+  #cursor-dot,#cursor-ring{ position:fixed; top:0; left:0; pointer-events:none; z-index:120; border-radius:9999px; transform:translate(-50%,-50%); }
+  #cursor-dot{ width:6px; height:6px; background:var(--gold); }
+  #cursor-ring{ width:34px; height:34px; border:1px solid rgba(212,175,55,.55); transition:width .25s ease, height .25s ease, border-color .25s ease; }
+  body.cursor-grow #cursor-ring{ width:58px; height:58px; border-color:rgba(212,175,55,.9); }
+  @media (hover:none), (pointer:coarse){ #cursor-dot,#cursor-ring{ display:none; } }
+
   /* ---------- Preloader ---------- */
   #preloader{ transition:opacity .8s ease, visibility .8s; }
   #preloader.done{ opacity:0; visibility:hidden; pointer-events:none; }
@@ -311,6 +318,7 @@
       </ul>
 
       <div class="flex items-center gap-3">
+        <!-- LINK 1: GET IN TOUCH -->
         <a href="#contact" class="btn-gold hidden sm:inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-[11px] font-bold tracking-[.18em] uppercase">
           GET IN TOUCH <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
         </a>
@@ -341,6 +349,7 @@
       <a href="#contact" class="menu-link font-display text-[1.65rem] leading-snug py-3.5 hover:text-[#e8cf8a] transition-colors flex items-center justify-between">Contact <i data-lucide="arrow-right" class="w-4 h-4 text-[#d4af37] shrink-0"></i></a>
     </nav>
     
+    <!-- LINK 2: GET IN TOUCH -->
     <a href="#contact" class="menu-link btn-gold mt-8 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-xs font-bold tracking-[.2em] uppercase">
       GET IN TOUCH <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
     </a>
@@ -365,7 +374,6 @@
     <div class="md:hidden absolute inset-0 bg-[#07070b]/40"></div>
   </div>
 
-  <!-- FIX: pt-24 on mobile moves the text up (was pt-40) -->
   <div class="hero-inner relative z-10 w-full mx-auto max-w-6xl px-5 sm:px-8 pt-24 pb-16 md:pt-40 md:pb-28 text-center">
     
     <div class="reveal flex items-center justify-center gap-4 mb-7" style="--d:260ms">
@@ -374,7 +382,7 @@
       <span class="hairline w-10 sm:w-16"></span>
     </div>
 
-    <!-- FIX: Name on 2 lines on mobile, using whitespace-nowrap for first line -->
+    <!-- Name on 2 lines on mobile, using whitespace-nowrap for first line -->
     <h1 class="reveal font-display font-extrabold tracking-tight flex flex-col items-center" style="--d:300ms">
       <span class="block hero-title-1 sm:text-7xl lg:text-8xl text-[#f5f1e6] drop-shadow-[0_6px_30px_rgba(0,0,0,.6)] whitespace-nowrap">JANNATUL FERDOUS</span>
       <span class="block hero-title-2 sm:text-8xl lg:text-[8.5rem] gold-grad-text italic pr-2 pb-1">OISHEE</span>
@@ -388,6 +396,8 @@
       <a href="#filmography" class="btn-gold inline-flex items-center gap-2.5 rounded-xl px-7 py-4 text-[11px] font-bold tracking-[.2em] uppercase">
         View Filmography <i data-lucide="clapperboard" class="w-4 h-4"></i>
       </a>
+      
+      <!-- LINK 3: GET IN TOUCH -->
       <a href="#contact" class="btn-ghost inline-flex items-center gap-2.5 rounded-xl px-7 py-4 text-[11px] font-semibold tracking-[.2em] uppercase text-white/90">
         GET IN TOUCH <i data-lucide="sparkles" class="w-4 h-4 text-[#d4af37]"></i>
       </a>
@@ -443,6 +453,7 @@
 <section id="about" class="relative z-10 py-24 md:py-36 scroll-mt-24">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
       <!-- Portrait -->
       <div class="lg:col-span-5 reveal">
         <div class="relative">
@@ -466,6 +477,7 @@
           </div>
         </div>
       </div>
+
       <!-- Bio -->
       <div class="lg:col-span-7">
         <div class="reveal flex items-center gap-4 mb-5" style="--d:80ms">
@@ -488,11 +500,13 @@
           <em class="font-display">Adam</em> reveal a range that moves effortlessly between vulnerability and steel. Off screen,
           she is a red-carpet mainstay and sought-after face for luxury fashion and beauty campaigns.
         </p>
+
         <div class="reveal mt-8 flex items-center gap-5" style="--d:400ms">
           <span class="font-script text-5xl gold-grad-text select-none">Oishee</span>
           <span class="w-px h-10 bg-white/12"></span>
           <p class="text-[10px] tracking-[.3em] uppercase text-white/45 leading-relaxed">Dhaka, Bangladesh<br />Available worldwide</p>
         </div>
+
         <!-- Stats -->
         <div class="reveal mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4" style="--d:480ms">
           <div class="glass rounded-2xl p-5 text-center card-lift">
@@ -533,6 +547,7 @@
         Six signature roles - from blockbuster action to intimate drama. Every title links directly to its IMDb page.
       </p>
     </div>
+
     <div id="film-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
   </div>
 </section>
@@ -553,6 +568,7 @@
         Twenty curated frames from shoots, sets and premieres. Tap any image to enter the cinema lightbox.
       </p>
     </div>
+
     <div id="gallery-grid" class="columns-2 md:columns-3 xl:columns-4 gap-4 space-y-4"></div>
   </div>
 </section>
@@ -573,6 +589,7 @@
         Releases, red carpets and the stories behind the frames - straight from the press desk.
       </p>
     </div>
+
     <div id="press-grid" class="grid md:grid-cols-2 gap-7"></div>
   </div>
 </section>
@@ -592,6 +609,7 @@
 <section id="contact" class="relative z-10 py-24 md:py-36 scroll-mt-24 border-t border-white/6">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+
       <!-- Left: invitation -->
       <div class="lg:col-span-5">
         <div class="reveal flex items-center gap-4 mb-5">
@@ -604,14 +622,15 @@
           For film projects, brand endorsements and event appearances, send an inquiry through the form -
           the management team responds within 48 hours.
         </p>
+
         <div class="reveal mt-9 space-y-4" style="--d:320ms">
-          <a href="mailto:sazbroh@gmail.com" class="glass rounded-2xl p-5 flex items-center gap-4 card-lift group">
+          <a href="mailto:contact@jfoishee.com" class="glass rounded-2xl p-5 flex items-center gap-4 card-lift group">
             <span class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#f0d98c] to-[#9c7a1d] text-[#1a1405] flex items-center justify-center shrink-0">
               <i data-lucide="mail" class="w-5 h-5"></i>
             </span>
             <div class="min-w-0">
               <p class="text-[10px] tracking-[.3em] uppercase text-white/45">Management Email</p>
-              <p class="text-sm font-medium text-[#f3efe4] truncate group-hover:text-[#e8cf8a] transition-colors">sazbroh@gmail.com</p>
+              <p class="text-sm font-medium text-[#f3efe4] truncate group-hover:text-[#e8cf8a] transition-colors">contact@jfoishee.com</p>
             </div>
             <i data-lucide="arrow-up-right" class="w-4 h-4 ml-auto text-white/30 group-hover:text-[#d4af37] transition-colors shrink-0"></i>
           </a>
@@ -640,13 +659,15 @@
       <div class="lg:col-span-7 reveal" style="--d:200ms">
         <div class="glass rounded-3xl p-6 sm:p-10 relative overflow-hidden">
           <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[radial-gradient(circle,rgba(212,175,55,.14),transparent_65%)] pointer-events-none"></div>
+
           <div class="flex items-center gap-3 mb-8">
             <i data-lucide="send" class="w-5 h-5 text-[#d4af37]"></i>
             <h3 class="font-display text-2xl font-semibold text-[#f5f1e6]">Send an Inquiry</h3>
           </div>
 
-          <form id="booking-form" method="POST" action="https://formspree.io/f/sazbroh@gmail.com" class="relative z-10 grid sm:grid-cols-2 gap-5">
+          <form id="booking-form" method="POST" action="https://formspree.io/f/xqpkozol" class="relative z-10 grid sm:grid-cols-2 gap-5">
             <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
             <div>
               <label for="f-name" class="block text-[10px] tracking-[.28em] uppercase text-white/55 mb-2">Full Name *</label>
               <input id="f-name" name="name" type="text" required placeholder="Your name" class="field w-full rounded-xl px-4 py-3.5 text-sm" />
@@ -679,7 +700,7 @@
                 <i data-lucide="send" class="w-4 h-4" id="submit-icon"></i>
               </button>
               <p class="text-[11px] text-white/40 font-light leading-relaxed sm:max-w-xs">
-                Delivered securely via Formspree to <span class="text-[#e8cf8a]">sazbroh@gmail.com</span>. No data is stored on this site.
+                Delivered securely via Formspree to <span class="text-[#e8cf8a]">contact@jfoishee.com</span>. No data is stored on this site.
               </p>
             </div>
           </form>
@@ -699,6 +720,7 @@
           Jannatul Ferdous Oishee - Miss World Bangladesh, film actress and fashion icon.
           Official portfolio for filmography, editorial work and bookings.
         </p>
+        <!-- Socials -->
         <div class="mt-6 flex items-center gap-3">
           <a href="https://www.facebook.com/OisheeMWBD18" target="_blank" rel="noopener" aria-label="Facebook" class="glass-soft soc w-10 h-10 rounded-xl text-white/60 hover:text-[#e8cf8a] hover:-translate-y-1 transition-all duration-300"><svg class="w-4 h-4"><use href="#brand-facebook"/></svg></a>
           <a href="https://www.instagram.com/jf.oishee/" target="_blank" rel="noopener" aria-label="Instagram" class="glass-soft soc w-10 h-10 rounded-xl text-white/60 hover:text-[#e8cf8a] hover:-translate-y-1 transition-all duration-300"><svg class="w-4 h-4"><use href="#brand-instagram"/></svg></a>
@@ -732,6 +754,8 @@
     <div class="hairline mt-12 mb-6"></div>
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-white/35 tracking-wider">
       <p>© <span id="year">2026</span> Jannatul Ferdous Oishee. All rights reserved.</p>
+      
+      <!-- LINK 4: FOOTER SAJON -->
       <p class="uppercase tracking-[.3em]">MADE WITH ❤️ BY <a href="http://wa.me/+8801620144000" target="_blank" rel="noopener noreferrer" class="text-[#d4af37] hover:text-white transition-colors underline underline-offset-4 decoration-[#d4af37]/50 hover:decoration-white font-bold">SAJON</a></p>
     </div>
   </div>
@@ -983,7 +1007,6 @@
     }
   ];
 
-  /* FIX: Mobile Press section image shape is now aspect-[3/4] portrait, similar to filmography, and desktop remains normal */
   const pressGrid = document.getElementById("press-grid");
   pressGrid.innerHTML = POSTS.map((p, i) => `
     <article class="reveal glass rounded-3xl overflow-hidden card-lift group grid sm:grid-cols-5" style="--d:${i * 110}ms">
@@ -1073,10 +1096,10 @@
         showToast("Inquiry sent. The management team will reply within 48 hours.");
         form.reset();
       } else {
-        showToast("The form endpoint isn't activated yet - please email sazbroh@gmail.com directly.", false);
+        showToast("The form endpoint isn't activated yet - please email contact@jfoishee.com directly.", false);
       }
     } catch (err) {
-      showToast("Network hiccup - please try again, or email sazbroh@gmail.com directly.", false);
+      showToast("Network hiccup - please try again, or email contact@jfoishee.com directly.", false);
     } finally {
       submitBtn.disabled = false;
       submitLabel.textContent = "Send Inquiry";
